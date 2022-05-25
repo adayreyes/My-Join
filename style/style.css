@@ -1,0 +1,167 @@
+:root{
+    --bg1:#1E3190;
+    --main-bg: #F4F3FB;
+    --margin-header: 75px;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    margin-bottom: 0;
+}
+
+body {
+    font-family: 'PT Sans', sans-serif;
+    display: flex;
+}
+main{
+    overflow-y: auto;
+    height: 100vh;
+}
+
+
+.main-header {
+    min-width: 200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color:var(--bg1);
+    position: relative;
+    
+}
+.nav-main-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    width: 100%;
+    gap: 60px;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 0 5px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.link-container {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-container a {
+    color: rgba(209, 209, 209, 0.815);
+    width: 65%;
+    text-decoration: none;
+    font-size: 20px;  
+}
+.link-border{
+    width: 4px;
+    height: 100%;
+    background-color: transparent;
+    transition: all 100ms ease-in-out;
+}
+
+
+.link-container:hover .link-border{
+    background-color: white;
+}
+
+.user-img-container {
+    border: 4px solid white;
+    border-radius: 100%;
+    height: 100px;
+    width: 100px;
+    margin-bottom: 40px;
+}
+
+.user-img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+
+
+.section-header{
+    padding: 2rem;
+}
+
+.font-title{
+    font-weight: bold;
+    color: var(--bg1);
+}
+
+.font-small{
+    font-size: .8rem;
+    color: var(--bg1);
+    font-weight: bold;
+}
+
+.priority-normal{
+    border-left: 8px solid orange !important;
+}
+.priority-low{
+    border-left: 8px solid green !important;
+}
+.priority-high{
+    border-left: 8px solid red !important;
+}
+
+.resp-img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin: 10px;
+    position: absolute;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.hidebar{
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+@media (max-width: 1000px){
+
+    .main-header{
+        display: none;
+    }
+    
+
+    
+}
+
+@media (min-width: 1000px){
+
+    .hidebar,.resp-img{
+        display: none;
+    }
+    .main-header{
+        display: flex;
+    }
+
+    
+}

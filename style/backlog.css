@@ -1,0 +1,176 @@
+main{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.backlog-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.backlog-header > *{
+    width: 300px;
+}
+.backlog-header span:last-child{
+    text-align: right;
+}
+.backlog-task p:last-child{
+    text-align: right;
+}
+.empty-backlog{
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 4rem;
+    color: grey;
+}
+
+.backlog-list{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem;
+    
+}
+.backlog-task{
+    display: flex;
+    background-color: var(--main-bg);
+    padding: 1rem;
+    border-radius: 10px;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: all 100ms ease-in-out; 
+}
+
+.backlog-task:hover{
+    background-color: rgb(228, 228, 228);
+}
+.backlog-task > *{
+    width: 300px;
+    
+    
+}
+.assigned-to{
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+}
+.name-container {
+    display: flex;
+    flex-direction: column;
+}
+.name-container a{
+    text-decoration: none;
+    color: rgb(0, 118, 253);
+}
+.assigned-to img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+
+.category{
+    margin-left: 1rem;
+}
+
+.backlog-link{
+    background-color: white;
+}
+
+.backlog-text{
+    color: white!important;
+}
+.big-task-container{
+    width: 100%;
+    display: flex;
+    padding: 2rem;
+    background-color: var(--main-bg);
+    position: absolute;
+    top: 100px;
+    justify-content: center;
+}
+.big-task-subcontainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+.icons-container{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    margin-bottom: 2rem;
+    gap: .5rem;
+}
+.icons-container img{
+    width: 30px;
+    cursor: pointer;
+}
+
+.big-task-tasks-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: space-around;
+}
+.big-task-name-container{
+    display: flex;
+    flex-direction: column;
+}
+.big-task-name-container a{
+    text-decoration: none;
+    color: rgb(0, 118, 253);
+}
+.big-task-tasks-container div > *{
+    margin-top: .5rem;
+}
+
+
+.d-none{
+    display: none;
+}
+
+@media(max-width: 1000px){
+    main{
+        text-align: center;
+    }
+    .backlog-header span:last-child{
+        text-align: center;
+    }
+    .backlog-task p:last-child{
+        text-align: center;
+    }
+    .big-task-tasks-container{
+        flex-direction: column;
+    }
+    .big-task-assigned-people{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+@media(max-width:700px){
+    .backlog-header span:last-child{
+        display: none;
+    }
+    .backlog-task p:last-child{
+        display: none;
+    }
+    .backlog-header span:nth-child(2){
+       text-align: right;
+    }
+    .backlog-task span:nth-child(2){
+        text-align: right;
+    }
+}
+
+@media(max-width:500px){
+    .name-container a{
+        display: none;
+    }
+}
